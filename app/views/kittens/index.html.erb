@@ -1,0 +1,14 @@
+<h1>Kittens</h1>
+<hr>
+<ul>
+  <% @kittens.each do |kitten| %>
+      <a href="/kittens/<%= kitten.id %>">
+        <p>Name: <%= kitten.name %></p>
+      </a>
+      <p>Age: <%= kitten.age %> years</p>
+      <p>Cuteness: <%= kitten.cuteness %></p>
+      <p>Softness: <%= kitten.softness %></p>
+      <hr>
+  <% end %>
+</ul>
+  <%= link_to "New kitten", new_kitten_path%>
